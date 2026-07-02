@@ -35,5 +35,17 @@ def echo_all(message):
 # Hem web sunucusunu hem botu başlat
 if __name__ == '__main__':
     Thread(target=run_web).start()
+    app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot aktif!"
+
+def run():
+    app.run(host='0.0.0.0', port=10000)
+
+t = Thread(target=run)
+t.start()
+
     bot.infinity_polling()
     
