@@ -47,5 +47,5 @@ def run():
 t = Thread(target=run)
 t.start()
 
-    bot.infinity_polling()
+bot.infinity_polling()
     
