@@ -32,10 +32,8 @@ def echo_all(message):
     elif message.text == '⚽ Futbol Tahmini':
         bot.reply_to(message, "⚽ Henüz aktif futbol tahmini bulunmuyor.")
 
-# Hem web sunucusunu hem botu başlat
-if __name__ == '__main__':
-    Thread(target=run_web).start()
-    app = Flask('')
+# Flask web sunucusunu ayarla
+app = Flask('')
 
 @app.route('/')
 def home():
@@ -44,8 +42,9 @@ def home():
 def run():
     app.run(host='0.0.0.0', port=10000)
 
+# Web sunucusunu arka planda çalıştır
 t = Thread(target=run)
 t.start()
 
+# Botu çalıştır
 bot.infinity_polling()
-    
