@@ -4,7 +4,7 @@ from threading import Thread
 from telebot import types
 
 # Token ve Chat ID bilgilerin güncellendi
-TOKEN = "8671377519:AAHRU5jHYCcPJUdiG4Qbf"
+TOKEN = "8671377519:AAFGnfzSC1p_PJnqiti0ANra4cPH89x9qv4"
 CHAT_ID = "-1004451794051"
 
 bot = telebot.TeleBot(TOKEN)
